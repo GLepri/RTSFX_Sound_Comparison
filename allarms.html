@@ -1,0 +1,120 @@
+<html>
+  <head>
+    <title>RTSFX_revire_Home</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="css/bootstrap.css">
+      <style>
+      div.container {
+          border: 0px solid black;
+          margin-top: 50px;
+          margin-bottom: 50px;
+          margin-right: 350px;
+          margin-left: 350px;
+          background-color: white;
+        }
+      </style>
+  </head>
+  <body>
+    <header>
+      &nbsp;
+      <center>
+        <font size="4">
+        <a
+        href="index.html">
+        Home</a>
+        &nbsp;
+        <a
+        href="allarms.html">
+        Allarms</a>
+        &nbsp;
+        <a
+        href="animals.html">
+        Animals</a>
+        &nbsp;
+        </font>
+      </center>
+      <hr></hr>
+      &nbsp;
+    </header>
+  <!--------------------------------------------------------------------------->
+        <div>
+          <center>
+          <h1>Allarms</h1>
+          &nbsp;
+          <h2> <font size="4"> Tested with Chrome 58.0.3029.110 (64-bit) </font> </h2>
+        </center>
+      </div>
+        <div class="container">
+          <h3>
+              <font size="3">
+                <p> Allarms general comments
+                <br \ >
+                  <ul>
+                      <li>  Pedestrian Crossing is missing on the pop-up menu (once you are into a specific sound synthesis) </li>
+                      <li>	Clock is missing on the pop-up menu (once you are into a specific sound synthesis) </li>
+                      <li>	Interface suggestion: add number boxes to display slider values with relative unit of measure (e.g. Hz, seconds) </li>
+                      <li>	Interface suggestion: "Bell 1 Pitch" - change "pitch" to "frequency" to be consistents with taxonomy used in the other sounds </li>
+                  </ul>
+                </p>
+              </font>
+          </h3>
+        </div>
+        <hr></hr>
+        &nbsp;
+  <!--------------------------------------------------------------------------->
+        <h4>
+          <center>
+            <b>
+              <font size="4"> Telophone Bell </font>
+            </b>
+         </center>
+        </h4>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6">
+              <a href="http://c4dm.eecs.qmul.ac.uk/audioengineering/RTSFX/phone-bell.html?p1=860&p2=865&p3=300&p4=12&p5=60&p6=1" target="_blank">
+              <p align="center"> RTSFX Telephon Bell (default)<br>
+              <br \>
+              </a>
+                <audio controls>
+                  <source src="audio/allarms/RTSFXTelephoneBell.wav" type="audio/wav">
+                  Your browser does not support the audio element.
+                </audio>
+              </p>
+              <a href="spectrogram/allarms/RTSFX_Telephon_Bell.jpg" target="_blank">
+              <img src="spectrogram/allarms/RTSFX_Telephon_Bell.jpg" alt="RTSFX Telephon Bell Spectrogram" width="100%">
+            </a>
+            </div>
+            <div class="col-md-6">
+              <p align="center"> Sample Telephon Bell <br>
+              <br \ >
+                <audio controls>
+                  <source src="audio/allarms/SampleTelephoneBell.wav" type="audio/wav">
+                  Your browser does not support the audio element.
+                </audio>
+              </p>
+              <a href="spectrogram/allarms/Sample_Telephon_Bell.jpg" target="_blank">
+              <img src="spectrogram/allarms/Sample_Telephon_Bell.jpg" alt="Sample Telephon Bell Spectrogram" width="100%">
+            </a>
+            </div>
+          </div>
+          <h5>
+            <font size="3">
+              &nbsp;
+              <p> Comments
+              <br \ >
+                <ul>
+                    <li>  Timing issue: bells should be triggered much faster </li>
+                    <li>	The synthesis in itself sounds good (the distribution and amplitude of partials of single bells are similar to selected sample) </li>
+                    <li>	We are missing the timing, triggering frequency should be between 8 and 10 Hz </li>
+                    <li>	We might need to add an impulsive noisy component to each bell sound (simulation of hammer beating the bell)? </li>
+                </ul>
+              </p>
+            </font>
+        </h5>
+      </div>
+      <hr></hr>
+    </body>
+  </html>
