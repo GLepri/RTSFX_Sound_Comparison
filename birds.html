@@ -103,20 +103,37 @@
           <div class="container">
             <h3>
               <font size="3">
-                <p> Birds interface comments
+                <p> Interface comments
                 <br \ >
                   <ul>
-                      <li> Generally, for technical labels, add number boxes to display sliders values </li> <br>
-                      <li> Many attacks and decays. Possible to group them? </li> <br>
-                      <li> FM 1", "AM 1", "FM 1 Attack", "FM 1 Decay" - better define this paramiters - more explicitly.
+                      <li> Generally, for technical labels, add number boxes with related unit of measure to display sliders values </li> <br>
+                      <li> There are many attacks and decays parameters. It would be good to establish some sort of hierarchy to better identify which are the main parameters
+                           and which are the associated attacks and decays. Possibly grouping them? See picture </li> <br>
+                           <div align="left">
+                             <img src="images/birds_interface_ex.jpg" alt="birds_interface_ex" width="40%">
+                           </div>
+                      <br \ >
+                      <li> FM 1", "AM 1", "FM 1 Attack", "FM 1 Decay" - better define this paramiters - more explicitly (e.g Carrier Frequency, Carrier Frequency Attack, Carrier Frequency Decay,
+                           Modulating Frequency, Modulating Frequency Attack, Modulating Frequency Decay, etc.).
                            Eventually, think about perceptual terms (i.e. what does change in the sound)  </li> <br>
                   </ul>
                   <hr></hr>
-                  <ul>
-                      Birds model comments
+                      Model comments <br>
                       <br \ >
-                    <li> Sounds too short.. </li> <br>
-                    <li> Difficult to produce glissando </li> <br>
+                  <ul>
+                    <li> Birds calls are generally a sequence of sounds which slightly vary between each others longer than one or two seconds (see firsts three sound examples). It would be good to have the possibility to generate sounds with lenghts
+                         up to 10 - 15 seconds. Ideally, this could be acheived accessing a short time-line and scheduling a few events recalling presets. Alternativelly, the randomise feature
+                         could be used to manually generate variations within the same sonic scope </li> <br>
+                    <li> Birds calls are characterised by small glissando (pitch shift, see examples below). Those variations are diffucult to replicate with FM synthesis. FM tends to generate simmetric spectrums
+                         (from a distribution of energy viewpoint). In order to generate more realistic bird call it would be useful to implement and control short glissando associated to the carrier frequency </li> <br>
+                  </ul>
+                  <hr></hr>
+                      Sound designers comments <br>
+                      <br \ >
+                  <ul>
+                    <li> Actually not too bad, if you want synthetic birds never heard in nature! But you never know that might be a useful thing </li> <br>
+                    <li> Simplifying the controls - very easy to create a mess! </li> <br>
+                    <li> Presets are great fun, but I soon created a nonsense when I started playing with the parameters! </li> <br>
                   </ul>
                 </p>
               </font>
@@ -124,6 +141,66 @@
           <hr></hr>
         </div>
     &nbsp;
+    <!--------------------------------------------------------------------------->
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <p align="center"> Example Blackbird Call Long 1<br>
+          <br \ >
+            <audio controls>
+              <source src="audio/animals/BIRD_BLACKBIRD_CALL03.wav" type="audio/wav">
+              Your browser does not support the audio element.
+            </audio>
+          </p>
+          <a href="spectrogram/animals/BlackBirdCallLong3.jpg" target="_blank">
+          <img src="spectrogram/animals/BlackBirdCallLong3.jpg" alt="Sample Blackbird Call Long 1 Spectrogram" width="100%">
+        </a>
+        </div>
+        <div class="col-md-6">
+          <p align="center"> Example Blackbird Call Long 2<br>
+          <br \ >
+            <audio controls>
+              <source src="audio/animals/BIRD_BLACKBIRD_CALL06.wav" type="audio/wav">
+              Your browser does not support the audio element.
+            </audio>
+          </p>
+          <a href="spectrogram/animals/BlackBirdCallLong6.jpg" target="_blank">
+          <img src="spectrogram/animals/BlackBirdCallLong6.jpg" alt="Sample Blackbird Call Long 2 Spectrogram" width="100%">
+        </a>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <p align="center"> Example Blackbird Call Long 3<br>
+          <br \ >
+            <audio controls>
+              <source src="audio/animals/BIRD_BLACKBIRD_CALL10.wav" type="audio/wav">
+              Your browser does not support the audio element.
+            </audio>
+          </p>
+          <a href="spectrogram/animals/BlackBirdCallLong10.jpg" target="_blank">
+          <img src="spectrogram/animals/BlackBirdCallLong10.jpg" alt="Sample Blackbird Call Long 3 Spectrogram" width="95%">
+        </a>
+        </div>
+      <div class="col-md-6">
+        <p align="center"> Example Blackbird Call Long 4<br>
+        <br \ >
+          <audio controls>
+            <source src="audio/animals/BIRD_BLACKBIRD_CALL01.wav" type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </p>
+        <a href="spectrogram/animals/BlackBirdCallLong1.jpg" target="_blank">
+        <img src="spectrogram/animals/BlackBirdCallLong1.jpg" alt="Sample Blackbird Call Long 4 Spectrogram" width="105%">
+        </a>
+      </div>
+    </div>
+    <hr></hr>
+    </div>
+    &nbsp;
+
 <!--------------------------------------------------------------------------->
 <div class="container">
   <div class="row">
