@@ -1,78 +1,138 @@
 <html>
   <head>
-    <title>RTSFX_revire_Home</title>
+    <title>RTSFX Review Home</title>
     <link
       rel="stylesheet"
       type="text/css"
       href="css/bootstrap.css">
-      <style>
-      div.container {
-          border: 0px solid black;
-          margin-top: 50px;
-          margin-bottom: 50px;
-          margin-right: 350px;
-          margin-left: 350px;
-          background-color: white;
-        }
-      </style>
+    <style>
+    div.container {
+        border: 0px solid black;
+        margin-top: 25px;
+        margin-bottom: 25px;
+        margin-right: 350px;
+        margin-left: 350px;
+        background-color: white;
+      }
+      div.boxed {
+      border: 1px solid lightblue ; width: 5% ;
+      }
+        </style>
+    </style>
   </head>
+  <!--------------------------------------------------------------------------->
   <body>
     <header>
       &nbsp;
       <center>
         <font size="4">
+        <div class="boxed">
         <a
         href="index.html">
         Home</a>
-        &nbsp;
-        <a
-        href="allarms.html">
-        Allarms</a>
-        &nbsp;
-        <a
-        href="animals.html">
-        Animals</a>
-        &nbsp;
+      </div>
+      <div class="container">
+        <hr></hr>
+          <a
+          href="allarms.html">
+          Telephon Bell</a>
+          &nbsp; &nbsp;|
+          &nbsp;
+          <a
+          href="mammals.html">
+          Mammals</a>
+          &nbsp; &nbsp;|
+          &nbsp;
+          <a
+          href="birds.html">
+          Birds</a>
+          &nbsp; &nbsp;|
+          &nbsp;
+          <a
+          href="rain.html">
+          Rain</a>
+          &nbsp; &nbsp;|
+          &nbsp;
+          <a
+          href="bouble.html">
+          Bouble pour</a>
+          &nbsp; &nbsp;|
+          &nbsp;
+          <a
+          href="fire.html">
+          Fire</a>
+          &nbsp; &nbsp;|
+          &nbsp;
+          <a
+          href="combinations.html">
+          Combinations</a>
+          &nbsp;
+          <hr></hr>
         </font>
       </center>
-      <hr></hr>
-      &nbsp;
-    </header>
+    &nbsp;
+  </div>
+  </header>
   <!--------------------------------------------------------------------------->
-        <div>
-          <center>
-          <h1>Allarms</h1>
+      <div>
+        <center>
+          <h2>Telephon Bell</h2>
           &nbsp;
           <h2> <font size="4"> Tested with Chrome 58.0.3029.110 (64-bit) </font> </h2>
         </center>
       </div>
+      <div>
+        <center>
+        <div class="container">
+        <hr></hr>
+                  <p>
+                    <h2>
+                      <font size="3">
+                      <a href="#Bell">Telephon Bell</a>
+                    </h2>
+                  </p>
+                  <hr></hr>
+                </div>
+              </center>
+            </div>
         <div class="container">
           <h3>
               <font size="3">
-                <p> Allarms general comments
+                <p> Telephon Bell interface comments
                 <br \ >
                   <ul>
                       <li>  Pedestrian Crossing is missing on the pop-up menu (once you are into a specific sound synthesis) </li>
                       <li>	Clock is missing on the pop-up menu (once you are into a specific sound synthesis) </li>
-                      <li>	Interface suggestion: add number boxes to display slider values with relative unit of measure (e.g. Hz, seconds) </li>
-                      <li>	Interface suggestion: "Bell 1 Pitch" - change "pitch" to "frequency" to be consistents with taxonomy used in the other sounds </li>
+                      <li>	Add number boxes to display slider values with relative unit of measure (e.g. Hz, seconds) </li>
+                      <li>	"Bell 1 Pitch" - change "pitch" to "frequency" to be consistents with taxonomy used in the other sounds </li>
                   </ul>
                 </p>
               </font>
           </h3>
+          <hr></hr>
         </div>
-        <hr></hr>
-        &nbsp;
+      <div class="container">
+      <h5>
+        <font size="3">
+          &nbsp;
+          <p> Telephon Bell model comments
+          <br \ >
+            <ul>
+                <li>  Timing issue: bells should be triggered much faster </li>
+                <li>	The synthesis in itself sounds good (the distribution and amplitude of partials of single bells are similar to selected sample) </li>
+                <li>	We are missing the timing, triggering frequency should be between 8 and 10 Hz </li>
+                <li>	We might need to add an impulsive noisy component to each bell sound (simulation of hammer beating the bell)? </li>
+            </ul>
+          </p>
+        </font>
+    </h5>
+    <hr></hr>
+  </div>
+    &nbsp;
   <!--------------------------------------------------------------------------->
-        <h4>
-          <center>
-            <b>
-              <font size="4"> Telophone Bell </font>
-            </b>
-         </center>
-        </h4>
         <div class="container">
           <div class="row">
+            <a name="Bell"></a>
             <div class="col-md-6">
               <a href="http://c4dm.eecs.qmul.ac.uk/audioengineering/RTSFX/phone-bell.html?p1=860&p2=865&p3=300&p4=12&p5=60&p6=1" target="_blank">
               <p align="center"> RTSFX Telephon Bell (default)<br>
@@ -100,21 +160,7 @@
             </a>
             </div>
           </div>
-          <h5>
-            <font size="3">
-              &nbsp;
-              <p> Comments
-              <br \ >
-                <ul>
-                    <li>  Timing issue: bells should be triggered much faster </li>
-                    <li>	The synthesis in itself sounds good (the distribution and amplitude of partials of single bells are similar to selected sample) </li>
-                    <li>	We are missing the timing, triggering frequency should be between 8 and 10 Hz </li>
-                    <li>	We might need to add an impulsive noisy component to each bell sound (simulation of hammer beating the bell)? </li>
-                </ul>
-              </p>
-            </font>
-        </h5>
-      </div>
-      <hr></hr>
+          <hr></hr>
+        </div>
     </body>
   </html>

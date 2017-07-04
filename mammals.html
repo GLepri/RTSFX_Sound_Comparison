@@ -1,0 +1,348 @@
+<html>
+  <head>
+    <title>RTSFX Review Home</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="css/bootstrap.css">
+    <style>
+    div.container {
+        border: 0px solid black;
+        margin-top: 25px;
+        margin-bottom: 25px;
+        margin-right: 350px;
+        margin-left: 350px;
+        background-color: white;
+      }
+      div.boxed {
+      border: 1px solid lightblue ; width: 5% ;
+      }
+        </style>
+    </style>
+  </head>
+  <!--------------------------------------------------------------------------->
+  <body>
+    <header>
+      &nbsp;
+      <center>
+        <font size="4">
+        <div class="boxed">
+        <a
+        href="index.html">
+        Home</a>
+      </div>
+      <div class="container">
+        <hr></hr>
+          <a
+          href="allarms.html">
+          Telephon Bell</a>
+          &nbsp; &nbsp;|
+          &nbsp;
+          <a
+          href="mammals.html">
+          Mammals</a>
+          &nbsp; &nbsp;|
+          &nbsp;
+          <a
+          href="birds.html">
+          Birds</a>
+          &nbsp; &nbsp;|
+          &nbsp;
+          <a
+          href="rain.html">
+          Rain</a>
+          &nbsp; &nbsp;|
+          &nbsp;
+          <a
+          href="bouble.html">
+          Bouble pour</a>
+          &nbsp; &nbsp;|
+          &nbsp;
+          <a
+          href="fire.html">
+          Fire</a>
+          &nbsp; &nbsp;|
+          &nbsp;
+          <a
+          href="combinations.html">
+          Combinations</a>
+          &nbsp;
+          <hr></hr>
+        </font>
+      </center>
+    &nbsp;
+  </div>
+  </header>
+<!--------------------------------------------------------------------------->
+    <div>
+      <center>
+      <h2>Mammals</h2>
+      &nbsp;
+      <h2> <font size="4"> Tested with Chrome 58.0.3029.110 (64-bit) </font> </h2>
+      <div class="container">
+      <hr></hr>
+      <p>
+        <h2> <font size="3">
+              <a href="#Fox">Fox</a>
+              -
+              <a href="#Leopard">Leopard</a>
+              -
+
+              <a href="#Puma">Puma</a>
+              -
+
+              <a href="#Lion">Lion</a>
+              -
+
+              <a href="#Tiger">Tiger</a>
+              -
+              <a href="#Wolf">Wolf</a>
+            </font>
+        </h2>
+      </p>
+      <hr></hr>
+    </div>
+    </center>
+    </div>
+    <div class="container">
+      <h3>
+        <font size="3">
+            <p> Mammals interface comments
+            <br\>
+              <ul>
+                <li> The taxonomy used for the sliders is a mix between perceptual and technical labels (e.g. Filter Q and Harshness) <br>
+                    It would be good to group and saparate the two types of taxonomies so that the interface is conceptually more clear. <br>
+                    For this model, better to avaid "obsucre" technical parameters (e.g. pulse open closed and return) and privilage more perceptual controls. </li> <br>
+                <li> Generally, for technical labels, add number boxes to display sliders values </li> <br>
+                <li> "Pulse Open" slider is a bit obscure (its variation is difficult to identify with changes in the generated sound - expecially with short sound) <br>
+                     The impression is that this paramiter filters the sound making it "more or less open" (i.e. highpass filter) <br>
+                     The parameter is not a continuos value: it has only trhee steps. Consider onther GUI object (e.g. selector) </li> <br>
+                <li> "Pulse Close" - same as above, but it seems to function as a low pass filter. Consider onther GUI object (e.g. selector) </li> <br>
+                <li> "Pulse Return" - same as above, but it seems to function as a band pass filter. Consider onther GUI object (e.g. selector) </li> <br>
+                <li> Consider to hide the "Pulse" sliders and control them trough another paramiter. This would make the interface simpler </li> <br>
+                <li> "Duration" - add a number box to specify slider value (in seconds?) </li> <br>
+                <li> "F0", "F1", "F2", "F3" - better define this paramiters - more explicitly (e.g. Fundamental Frequency, First partial, Second partial, Third Partial) <br>
+                     Add number boxes to specify sliders values (in Hz?) </li> <br>
+              </ul>
+            </p>
+            <hr></hr>
+            <p> Mammals model comments
+              <br\>
+              <ul>
+                <li> While playing the sounds artifacts are generated (clicks) </li>  <br>
+                <li> Each time the algorithm is triggered the resulting sounds is slitly different. This seems to be related to (i) the variation of the
+                     amplitude evenvelop (genralli divided in two parts) and (ii) the variation of the fundamental frequency (glissando).
+                     This does not happen when I play the pd patch. Potentially it would be good to allow the user to control this two feature
+                     (e.g. select between differnt possiblities). Ideally, if the parameters are not changed the sound should be always the same </li> <br>
+                <li> Increase the frequency range of the "low pass filter" in order to be able to decrease the energy in the lower frequency range  </li> <br>
+                <li> Note that the Growl samples often have the highest component disappering in the second half of the sound, this variation could be introduced for Growl sounds applying a highpass filter </li> <br>
+                <li> RTSFX sounds seems to lack brightness and noisyness. Add more frequency components to get noisy energy in the hihger frequency range </li> <br>
+              </ul>
+              <br>
+            </p>
+          </font>
+          </h3>
+          <hr></hr>
+          </div>
+    <div class="container">
+      <div class="row">
+        <a name="Fox"></a>
+        <div class="col-md-6">
+          <a href="http://c4dm.eecs.qmul.ac.uk/audioengineering/RTSFX/mammals.html?p1=1.276&p2=60&p3=50&p4=0&p5=0&p6=3&p7=1000&p8=926&p9=844&p10=1.1&p11=1.1&p12=2000&p13=0.91" target="_blank">
+          <p align="center"> RTSFX Fox Roar (preset)<br>
+          <br \>
+          </a>
+            <audio controls>
+              <source src="audio/animals/RTSFX_Fox_Roar.wav" type="audio/wav">
+              Your browser does not support the audio element.
+            </audio>
+          </p>
+          <a href="spectrogram/animals/RTSFX_Fox.jpg" target="_blank">
+          <img src="spectrogram/animals/RTSFX_Fox.jpg" alt="RTSFX Fox Spectrogram" width="100%">
+        </a>
+        </div>
+        <div class="col-md-6">
+          <p align="center"> Sample Fox Roar <br>
+          <br \ >
+            <audio controls>
+              <source src="audio/animals/RedFoxCuthreat.wav" type="audio/wav">
+              Your browser does not support the audio element.
+            </audio>
+          </p>
+          <a href="spectrogram/animals/Sample_Fox.jpg" target="_blank">
+          <img src="spectrogram/animals/Sample_Fox.jpg" alt="Sample Fox Spectrogram" width="100%">
+        </a>
+        </div>
+      </div>
+      <hr></hr>
+  </div>
+  <!--------------------------------------------------------------------------->
+  <div class="container">
+    <div class="row">
+      <a name="Leopard"></a>
+      <div class="col-md-6">
+        <a href="http://c4dm.eecs.qmul.ac.uk/audioengineering/RTSFX/mammals.html?p1=2.784&p2=29.2&p3=31&p4=2&p5=1&p6=2&p7=168&p8=812&p9=1000&p10=1.1&p11=0.35&p12=2000&p13=0.93" target="_blank">
+        <p align="center"> RTSFX Leopard Growl (preset)<br>
+        <br \>
+        </a>
+          <audio controls>
+            <source src="audio/animals/RTSFX_Leopard_Growl.wav" type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </p>
+        <a href="spectrogram/animals/RTSFX_Leopard.jpg" target="_blank">
+        <img src="spectrogram/animals/RTSFX_Leopard.jpg" alt="RTSFX Leopard Spectrogram" width="100%">
+      </a>
+      </div>
+      <div class="col-md-6">
+        <p align="center"> Sample Leopard Growl <br>
+        <br \ >
+          <audio controls>
+            <source src="audio/animals/LeopardGrowlsan.wav" type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </p>
+        <center>
+          <a href="spectrogram/animals/Sample_Leopard.jpg" target="_blank">
+          <img src="spectrogram/animals/Sample_Leopard.jpg" alt="Sample Leopard Spectrogram" width="84%">
+        </a>
+      </center>
+
+      </div>
+    </div>
+    <hr></hr>
+</div>
+<!--------------------------------------------------------------------------->
+<div class="container">
+  <div class="row">
+    <a name="Puma"></a>
+    <div class="col-md-6">
+      <a href="http://c4dm.eecs.qmul.ac.uk/audioengineering/RTSFX/mammals.html?p1=1.397&p2=60&p3=42.8&p4=1&p5=2&p6=1&p7=698&p8=844&p9=911&p10=1.1&p11=1.1&p12=1179&p13=0.91" target="_blank">
+      <p align="center"> RTSFX Puma Growl (preset)<br>
+      <br \>
+      </a>
+        <audio controls>
+          <source src="audio/animals/RTSFX_Puma_Growl.wav" type="audio/wav">
+          Your browser does not support the audio element.
+        </audio>
+      </p>
+      <a href="spectrogram/animals/RTSFX_Puma.jpg" target="_blank">
+      <img src="spectrogram/animals/RTSFX_Puma.jpg" alt="RTSFX Puma Spectrogram" width="100%">
+    </a>
+    </div>
+    <div class="col-md-6">
+      <p align="center"> Sample Puma Growl <br>
+      <br \ >
+        <audio controls>
+          <source src="audio/animals/PumaCulowgrow.wav" type="audio/wav">
+          Your browser does not support the audio element.
+        </audio>
+      </p>
+      <a href="spectrogram/animals/Sample_Puma.jpg" target="_blank">
+      <img src="spectrogram/animals/Sample_Puma.jpg" alt="Sample Puma Spectrogram" width="100%">
+    </a>
+    </div>
+  </div>
+  <hr></hr>
+</div>
+<!--------------------------------------------------------------------------->
+<div class="container">
+  <div class="row">
+    <a name="Lion"></a>
+    <div class="col-md-6">
+      <a href="http://c4dm.eecs.qmul.ac.uk/audioengineering/RTSFX/mammals.html?p1=3.445&p2=52.9&p3=28&p4=0&p5=0&p6=0&p7=620&p8=937&p9=791&p10=1.1&p11=0.96&p12=2000&p13=0.91" target="_blank">
+      <p align="center"> RTSFX Lion Roar (preset)<br>
+      <br \>
+      </a>
+        <audio controls>
+          <source src="audio/animals/RTSFX_Lion_Roar.wav" type="audio/wav">
+          Your browser does not support the audio element.
+        </audio>
+      </p>
+      <a href="spectrogram/animals/RTSFX_Lion.jpg" target="_blank">
+      <img src="spectrogram/animals/RTSFX_Lion.jpg" alt="RTSFX Lion Spectrogram" width="100%">
+    </a>
+    </div>
+    <div class="col-md-6">
+      <p align="center"> Sample Lion Roar <br>
+      <br \ >
+        <audio controls>
+          <source src="audio/animals/LionGrowl.wav" type="audio/wav">
+          Your browser does not support the audio element.
+        </audio>
+      </p>
+      <a href="spectrogram/animals/Sample_Lion.jpg" target="_blank">
+      <img src="spectrogram/animals/Sample_Lion.jpg" alt="Sample Lion Spectrogram" width="100%">
+    </a>
+    </div>
+  </div>
+  <hr></hr>
+</div>
+<!--------------------------------------------------------------------------->
+<div class="container">
+  <div class="row">
+    <a name="Tiger"></a>
+    <div class="col-md-6">
+      <a href="http://c4dm.eecs.qmul.ac.uk/audioengineering/RTSFX/mammals.html?p1=1.909&p2=42.4&p3=15.3&p4=1&p5=2&p6=2&p7=100&p8=370&p9=540&p10=0.96&p11=1.1&p12=1903&p13=0.89" target="_blank">
+      <p align="center"> RTSFX Tiger Roar (preset)<br>
+      <br \>
+      </a>
+        <audio controls>
+          <source src="audio/animals/RTSFX_Tiger_Roar.wav" type="audio/wav">
+          Your browser does not support the audio element.
+        </audio>
+      </p>
+      <a href="spectrogram/animals/RTSFX_Tiger.jpg" target="_blank">
+      <img src="spectrogram/animals/RTSFX_Tiger.jpg" alt="RTSFX Tiger Spectrogram" width="100%">
+    </a>
+    </div>
+    <div class="col-md-6">
+      <p align="center"> Sample Tiger Roar <br>
+      <br \ >
+        <audio controls>
+          <source src="audio/animals/TigerSiberianti.wav" type="audio/wav">
+          Your browser does not support the audio element.
+        </audio>
+      </p>
+      <a href="spectrogram/animals/Sample_Tiger.jpg" target="_blank">
+      <img src="spectrogram/animals/Sample_Tiger.jpg" alt="Sample Tiger Spectrogram" width="100%">
+    </a>
+    </div>
+  </div>
+  <hr></hr>
+</div>
+<!--------------------------------------------------------------------------->
+<div class="container">
+  <div class="row">
+    <a name="Wolf"></a>
+    <div class="col-md-6">
+      <a href="http://c4dm.eecs.qmul.ac.uk/audioengineering/RTSFX/mammals.html?p1=3.808&p2=55.8&p3=44.2&p4=2&p5=2&p6=2&p7=838&p8=330&p9=940&p10=1.1&p11=1.1&p12=1061&p13=0.88" target="_blank">
+      <p align="center"> RTSFX Wolf Growl (preset)<br>
+      <br \>
+      </a>
+        <audio controls>
+          <source src="audio/animals/RTSFX_Wolf_Growl.wav" type="audio/wav">
+          Your browser does not support the audio element.
+        </audio>
+      </p>
+      <a href="spectrogram/animals/RTSFX_Wolf.jpg" target="_blank">
+      <img src="spectrogram/animals/RTSFX_Wolf.jpg" alt="RTSFX Wolf Spectrogram" width="100%">
+    </a>
+    </div>
+    <div class="col-md-6">
+      <p align="center"> Sample Wolf Growl<br>
+      <br \ >
+        <audio controls>
+          <source src="audio/animals/WolfTwoanimals.wav" type="audio/wav">
+          Your browser does not support the audio element.
+        </audio>
+      </p>
+      <a href="spectrogram/animals/Sample_Wolf.jpg" target="_blank">
+      <img src="spectrogram/animals/Sample_Wolf.jpg" alt="Sample Wolf Spectrogram" width="100%">
+    </a>
+    </div>
+  </div>
+  <hr></hr>
+</div>
+</body>
+</html>
