@@ -1,6 +1,6 @@
 <html>
   <head>
-    <title>RTSFX Review Home</title>
+    <title>RTSFX Review Fire</title>
     <link
       rel="stylesheet"
       type="text/css"
@@ -17,7 +17,6 @@
       div.boxed {
       border: 1px solid lightblue ; width: 5% ;
       }
-        </style>
     </style>
   </head>
   <!--------------------------------------------------------------------------->
@@ -64,13 +63,17 @@
           &nbsp; &nbsp;|
           &nbsp;
           <a
-          href="combinations.html">
+          href="comb.html">
           Combinations</a>
-          &nbsp;
           <hr></hr>
+          | &nbsp; &nbsp;
+          <a
+          href="references.html">
+          References</a>
+          &nbsp; &nbsp;|
+          <hr width=30%></hr>
         </font>
       </center>
-    &nbsp;
   </div>
   </header>
   <!--------------------------------------------------------------------------->
@@ -87,8 +90,12 @@
   <p>
     <h2>
       <font size="3">
-          <a href="#Fox">Fox</a>
+          <a href="#FireAtmosphere">Fire Atmosphere</a>
           -
+          <a href="#FireLapping">Fire Lapping</a>
+          -
+          <a href="#FireCrackling">Fire Crackling</a>
+
         </font>
     </h2>
   </p>
@@ -99,16 +106,29 @@
 <div class="container">
   <h3>
     <font size="3">
-      <p> Fire interface comments
+      <p> Interface comments
       <br \ >
         <ul>
-            <li>  </li> <br>
+          <li> All good, clear and neat.</li> <br>
         </ul>
         <hr></hr>
-        <p> Fire model comments
+        <p> Model comments
           <br \ >
            <ul>
-          <li> </li> <br>
+          <li> <b> Problem with crackling parameter </b>, probably related to web-pd. By porting the model to javascript this should be fixed. </li> <br>
+          <li> The RTSFX sound is <b> not snappy enough </b> (see sound designers comments). </li> <br>
+          <li> <b> Increase granularity and density of crackling and hissing </b> would be good to acheive a more realistic sound. </li> <br>
+          <li> <b> Differenciate left and right channels </b>. Two differnt istances of the same model could be sent to the right and left channels, this
+               would increase the naturalness of the model. </li> <br>
+          <li> It is possible to hear a <b> loop related to the "hissing" parameter </b> (see sound designers comments). </li> <br>
+        </ul>
+        <hr></hr>
+        <p> Sound designers comments
+          <br \ >
+           <ul>
+          <li> The basic roar is good, however the hissing control introduces a sense of "looping". Crackling seems more random, but could have a more
+               "snappy" edge like wood cracking in flames. The crackling element is the least realistic. </li> <br>
+          <li> Increase the cycle/randomness of the hissing element, add a "snap" control to introduce that sense of wood burning </li> <br>
         </ul>
         <br>
       </p>
@@ -119,32 +139,130 @@
 &nbsp;
 <!--------------------------------------------------------------------------->
 <div class="container">
+  <p align="center"> <b> Fire example, to use as general reference. </b> </p> <br>
   <div class="row">
-    <a name="Blackbird1"></a>
     <div class="col-md-6">
-      <a href="http://c4dm.eecs.qmul.ac.uk/audioengineering/RTSFX/bird-call.html?p1=0.318&p2=0.6&p3=0.527&p4=0.007&p5=0.95&p6=0.305&p7=0.019&p8=0.359&p9=0.149&p10=0.356&p11=0.164&p12=0.641&p13=0.503&p14=0.853&p15=0.626&p16=0.931" target="_blank">
-      <p align="center"> RTSFX Blackbird 1 (preset)<br>
-      <br \>
-      </a>
-        <audio controls>
-          <source src="audio/animals/RTSFX_Blackbird_1.wav" type="audio/wav">
-          Your browser does not support the audio element.
-        </audio>
+      <p align="center"> Medium Fire.<br>
+      <br \ >
+      <audio controls>
+        <source src="audio/nature/FireExampleMedium.wav" type="audio/wav">
+        Your browser does not support the audio element.
+      </audio>
       </p>
-      <a href="spectrogram/animals/RSFX_Blackbird1.png" target="_blank">
-      <img src="spectrogram/animals/RSFX_Blackbird1.png" alt="RTSFX Blackbird 1 Spectrogram" width="100%">
+      <a href="spectrogram/nature/FireExampleMedium.png" target="_blank">
+      <img src="spectrogram/nature/FireExampleMedium.png" alt="Sample Fire Medium Spectrogram" width="100%">
     </a>
     </div>
     <div class="col-md-6">
-      <p align="center"> Sample Blackbird 1<br>
+      <p align="center"> Large Fire <br>
       <br \ >
+      <audio controls>
+        <source src="audio/nature/FireExampleLarge.wav" type="audio/wav">
+        Your browser does not support the audio element.
+      </audio>
+      </p>
+      <a href="spectrogram/nature/FireExampleLarge.png" target="_blank">
+      <img src="spectrogram/nature/FireExampleLarge.png" alt="Sample Fire Large Spectrogram" width="100%">
+    </a>
+    </div>
+  </div>
+</div>
+&nbsp;
+<!--------------------------------------------------------------------------->
+<div class="container">
+<p align="center"> <b> RTSFX syntheses - Recorded samples comparison. </b> </p> <br>
+  <div class="row">
+    <a name="FireAtmosphere"></a>
+    <div class="col-md-6">
+      <a href="http://c4dm.eecs.qmul.ac.uk/audioengineering/RTSFX/fire.html?p1=2&p2=0.01&p3=3&p4=0.2" target="_blank">
+      <p align="center"> RTSFX Fire Atmosphere (preset)<br>
+      <br \>
+      </a>
         <audio controls>
-          <source src="audio/animals/BLACKBIRD_01.wav" type="audio/wav">
+          <source src="audio/nature/RTSFX_Fire.wav" type="audio/wav">
           Your browser does not support the audio element.
         </audio>
       </p>
-      <a href="spectrogram/animals/Blackbird1.png" target="_blank">
-      <img src="spectrogram/animals/Blackbird1.png" alt="Sample Blackbird 1 Spectrogram" width="100%">
+      <a href="spectrogram/nature/RTSFXFire.png" target="_blank">
+      <img src="spectrogram/nature/RTSFXFire.png" alt="RTSFX Fire Atmosphere Spectrogram" width="100%">
+    </a>
+    </div>
+    <div class="col-md-6">
+      <p align="center"> Sample Fire Atmosphere <br>
+      <br \ >
+        <audio controls>
+          <source src="audio/nature/FireAtmosphere.wav" type="audio/wav">
+          Your browser does not support the audio element.
+        </audio>
+      </p>
+      <a href="spectrogram/nature/FireAtmosphere.png" target="_blank">
+      <img src="spectrogram/nature/FireAtmosphere.png" alt="Sample Fire Atmosphere Spectrogram" width="100%">
+    </a>
+    </div>
+  </div>
+  <hr></hr>
+</div>
+<!--------------------------------------------------------------------------->
+<div class="container">
+  <div class="row">
+    <a name="FireLapping"></a>
+    <div class="col-md-6">
+      <a href="http://c4dm.eecs.qmul.ac.uk/audioengineering/RTSFX/fire.html?p1=2&p2=0.02&p3=0&p4=0.2" target="_blank">
+      <p align="center"> RTSFX Fire Lapping (preset)<br>
+      <br \>
+      </a>
+        <audio controls>
+          <source src="audio/nature/RTSFXFire_Lapping.wav" type="audio/wav">
+          Your browser does not support the audio element.
+        </audio>
+      </p>
+      <a href="spectrogram/nature/RTSFXLapping.png" target="_blank">
+      <img src="spectrogram/nature/RTSFXLapping.png" alt="RTSFX Fire Lapping Spectrogram" width="100%">
+    </a>
+    </div>
+    <div class="col-md-6">
+      <p align="center"> Sample Fire Lapping<br>
+      <br \ >
+        <audio controls>
+          <source src="audio/nature/FireLapping.wav" type="audio/wav">
+          Your browser does not support the audio element.
+        </audio>
+      </p>
+      <a href="spectrogram/nature/FireLapping.png" target="_blank">
+      <img src="spectrogram/nature/FireLapping.png" alt="Sample Fire Lapping Spectrogram" width="100%">
+    </a>
+    </div>
+  </div>
+  <hr></hr>
+</div>
+<!--------------------------------------------------------------------------->
+<div class="container">
+  <div class="row">
+    <a name="FireCrackling"></a>
+    <div class="col-md-6">
+      <a href="http://c4dm.eecs.qmul.ac.uk/audioengineering/RTSFX/fire.html" target="_blank">
+      <p align="center"> RTSFX Fire Crackling (preset)<br>
+      <br \>
+      </a>
+        <audio controls>
+          <source src="audio/nature/RTSFX_FireCrackling.wav" type="audio/wav">
+          Your browser does not support the audio element.
+        </audio>
+      </p>
+      <a href="spectrogram/nature/RTSFXFireCrackling.png" target="_blank">
+      <img src="spectrogram/nature/RTSFXFireCrackling.png" alt="RTSFX Fire Crackling Spectrogram" width="100%">
+    </a>
+    </div>
+    <div class="col-md-6">
+      <p align="center"> Sample Fire Crackling<br>
+      <br \ >
+        <audio controls>
+          <source src="audio/nature/FireCrackling.wav" type="audio/wav">
+          Your browser does not support the audio element.
+        </audio>
+      </p>
+      <a href="spectrogram/nature/FireCrackling.png" target="_blank">
+      <img src="spectrogram/nature/FireCrackling.png" alt="Sample Fire Crackling Spectrogram" width="100%">
     </a>
     </div>
   </div>

@@ -1,6 +1,6 @@
 <html>
   <head>
-    <title>RTSFX Review Home</title>
+    <title>RTSFX Review Boubles Pour</title>
     <link
       rel="stylesheet"
       type="text/css"
@@ -17,7 +17,6 @@
       div.boxed {
       border: 1px solid lightblue ; width: 5% ;
       }
-        </style>
     </style>
   </head>
   <!--------------------------------------------------------------------------->
@@ -64,13 +63,17 @@
           &nbsp; &nbsp;|
           &nbsp;
           <a
-          href="combinations.html">
+          href="comb.html">
           Combinations</a>
-          &nbsp;
           <hr></hr>
+          | &nbsp; &nbsp;
+          <a
+          href="references.html">
+          References</a>
+          &nbsp; &nbsp;|
+          <hr width=30%></hr>
         </font>
       </center>
-    &nbsp;
   </div>
   </header>
   <!--------------------------------------------------------------------------->
@@ -87,8 +90,14 @@
   <p>
     <h2>
       <font size="3">
-          <a href="#Fox">Fox</a>
+          <a href="#Bouble1">Bouble pour</a>
           -
+          <a href="#BoubleLittle">Little bouble pour</a>
+          -
+          <a href="#BoubleSplashy">Bouble pour splashy</a>
+          -
+          <a href="#BoubleLaboratory">Bouble lab alembic</a>
+
         </font>
     </h2>
   </p>
@@ -99,16 +108,36 @@
 <div class="container">
   <h3>
     <font size="3">
-      <p> Bouble pour interface comments
+      <p> Interface comments
       <br \ >
         <ul>
-            <li>  </li> <br>
+            <li> Taxonomies such as "emphasis, level and deviation" are quite obscure (especially for non technical users). Try to sobstitute them with <b> more
+                 clear and accessible terms </b>. I would suggest to move towards a more perceptive taxonomy (e.g. emphsis = flanger depth, density deviation = granularity,
+                 size deviation = size variation?)</li> <br>
+            <li> <b> Consider to hide some parameter in order to simplify the interface </b> (e.g. size deviation and density deviation could be fixed parameters
+                 not accessible to the user). </li> <br>
+            <li> Generally, for technical labels, <b> add number boxes </b> with related unit of measure to display sliders values </li> <br>
         </ul>
         <hr></hr>
-        <p> Bouble pour model comments
+        <p> Model comments
           <br \ >
            <ul>
-          <li> </li> <br>
+          <li> While playning around with the parameters it is very easy to end up with quite unrealistic sounds. Consider to <b> rescale or limit
+               the range of the various parameters </b> (see in particular the "emphasis" slide). </li> <br>
+          <li> The RTSFX pour is quite metallic and "synthetic". A possible improvement could be related to the <b> filtering of the higher frequency range </b>
+               (low pass filter - cutoff frequency at 10000 Hz)</li> <br>
+          <li> By listeing to the samples it is possible to note that the act of pouring a liquid is usually coupled to drop sounds (generally little size drops).
+               In order to make the synthesis more realistic, it might be useful to <b> juxtapose a rain-drop synthesis to the pouring one </b>. </li> <br>
+          <li> By looking at the sample spectrograms it is possible to note that the main energy contents is usually constrined in the low register
+               (up to 1500-2000 Hz). Each of these sounds are characterised by a glissando (pitch shift) behaviour. The RTSFX synthesis generates similar pitch variations
+               but the various pitch shifts are spread over a too large range (up to 5000 Hz). In order to emulate the samoles, consider to <b> constrain this glissando scope </b>. </li> <br>
+        </ul>
+        <hr></hr>
+        <p> Sound designers comments
+          <br \ >
+           <ul>
+          <li> Not realistic at all </li> <br>
+          <li> I could not find a single usable sound. </li> <br>
         </ul>
         <br>
       </p>
@@ -119,32 +148,132 @@
 &nbsp;
 <!--------------------------------------------------------------------------->
 <div class="container">
+<p align="center"> <b> RTSFX syntheses - Recorded samples comparison. </b> </p> <br>
   <div class="row">
-    <a name="Blackbird1"></a>
+    <a name="Bouble1"></a>
     <div class="col-md-6">
-      <a href="http://c4dm.eecs.qmul.ac.uk/audioengineering/RTSFX/bird-call.html?p1=0.318&p2=0.6&p3=0.527&p4=0.007&p5=0.95&p6=0.305&p7=0.019&p8=0.359&p9=0.149&p10=0.356&p11=0.164&p12=0.641&p13=0.503&p14=0.853&p15=0.626&p16=0.931" target="_blank">
-      <p align="center"> RTSFX Blackbird 1 (preset)<br>
+      <a href="http://c4dm.eecs.qmul.ac.uk/audioengineering/RTSFX/bubble-pour.html?p1=1006&p2=0&p3=0.59&p4=95&p5=98.7&p6=113.6&p7=-15.4&p8=1&p9=0.34&p10=0.19&p11=0.8" target="_blank">
+      <p align="center"> RTSFX Bouble pour 1 (preset)<br>
       <br \>
       </a>
         <audio controls>
-          <source src="audio/animals/RTSFX_Blackbird_1.wav" type="audio/wav">
+          <source src="audio/nature/RTSFX_Bubble_01.wav" type="audio/wav">
           Your browser does not support the audio element.
         </audio>
       </p>
-      <a href="spectrogram/animals/RSFX_Blackbird1.png" target="_blank">
-      <img src="spectrogram/animals/RSFX_Blackbird1.png" alt="RTSFX Blackbird 1 Spectrogram" width="100%">
+      <a href="spectrogram/nature/RTSFXBouble01.png" target="_blank">
+      <img src="spectrogram/nature/RTSFXBouble01.png" alt="RTSFX Bouble pour 1 Spectrogram" width="100%">
     </a>
     </div>
     <div class="col-md-6">
-      <p align="center"> Sample Blackbird 1<br>
+      <p align="center"> Sample Bouble pour 1<br>
       <br \ >
         <audio controls>
-          <source src="audio/animals/BLACKBIRD_01.wav" type="audio/wav">
+          <source src="audio/nature/Bubbles_01.wav" type="audio/wav">
           Your browser does not support the audio element.
         </audio>
       </p>
-      <a href="spectrogram/animals/Blackbird1.png" target="_blank">
-      <img src="spectrogram/animals/Blackbird1.png" alt="Sample Blackbird 1 Spectrogram" width="100%">
+      <a href="spectrogram/nature/Bouble01.png" target="_blank">
+      <img src="spectrogram/nature/Bouble01.png" alt="Sample Bouble pour 1 Spectrogram" width="100%">
+    </a>
+    </div>
+  </div>
+  <hr></hr>
+</div>
+<!--------------------------------------------------------------------------->
+<div class="container">
+  <div class="row">
+    <a name="BoubleLittle"></a>
+    <div class="col-md-6">
+      <a href="http://c4dm.eecs.qmul.ac.uk/audioengineering/RTSFX/bubble-pour.html?p1=8603&p2=0&p3=0.69&p4=65.5&p5=51&p6=115.1&p7=-32&p8=0.51&p9=0.8&p10=0&p11=0.8" target="_blank">
+      <p align="center"> RTSFX Little bouble pour (preset)<br>
+      <br \>
+      </a>
+        <audio controls>
+          <source src="audio/nature/RTSFX_BoubleLittle.wav" type="audio/wav">
+          Your browser does not support the audio element.
+        </audio>
+      </p>
+      <a href="spectrogram/nature/RTSFXBoubleLittle.png" target="_blank">
+      <img src="spectrogram/nature/RTSFXBoubleLittle.png" alt="RTSFX Little bouble pour Spectrogram" width="100%">
+    </a>
+    </div>
+    <div class="col-md-6">
+      <p align="center"> Sample Little bouble pour<br>
+      <br \ >
+        <audio controls>
+          <source src="audio/nature/Bubbles_Little.wav" type="audio/wav">
+          Your browser does not support the audio element.
+        </audio>
+      </p>
+      <a href="spectrogram/nature/BoubleLittle.png" target="_blank">
+      <img src="spectrogram/nature/BoubleLittle.png" alt="Sample Little bouble pour Spectrogram" width="100%">
+    </a>
+    </div>
+  </div>
+  <hr></hr>
+</div>
+<!--------------------------------------------------------------------------->
+<div class="container">
+  <div class="row">
+    <a name="BoubleSplashy"></a>
+    <div class="col-md-6">
+      <a href="http://c4dm.eecs.qmul.ac.uk/audioengineering/RTSFX/bubble-pour.html?p1=8603&p2=0.42&p3=0.69&p4=65.5&p5=0&p6=115.1&p7=-32&p8=0.85&p9=0.8&p10=1&p11=0.8" target="_blank">
+      <p align="center"> RTSFX Bouble pour splashy (preset)<br>
+      <br \>
+      </a>
+        <audio controls>
+          <source src="audio/nature/RTSFX_Bouble_Splashy.wav" type="audio/wav">
+          Your browser does not support the audio element.
+        </audio>
+      </p>
+      <a href="spectrogram/nature/RTSFXBoubleSplashy.png" target="_blank">
+      <img src="spectrogram/nature/RTSFXBoubleSplashy.png" alt="RTSFX Bouble pour splashy Spectrogram" width="100%">
+    </a>
+    </div>
+    <div class="col-md-6">
+      <p align="center"> Sample Bouble pour splashy<br>
+      <br \ >
+        <audio controls>
+          <source src="audio/nature/Bubbles_Splashy.wav" type="audio/wav">
+          Your browser does not support the audio element.
+        </audio>
+      </p>
+      <a href="spectrogram/nature/BoubleSplashy.png" target="_blank">
+      <img src="spectrogram/nature/BoubleSplashy.png" alt="Sample Bouble pour splashy Spectrogram" width="100%">
+    </a>
+    </div>
+  </div>
+  <hr></hr>
+</div>
+<!--------------------------------------------------------------------------->
+<div class="container">
+  <div class="row">
+    <a name="BoubleLaboratory"></a>
+    <div class="col-md-6">
+      <a href="http://c4dm.eecs.qmul.ac.uk/audioengineering/RTSFX/bubble-pour.html?p1=10000&p2=0.36&p3=0.58&p4=95&p5=9.7&p6=126.1&p7=-39.7&p8=0.29&p9=0.78&p10=1&p11=0.8" target="_blank">
+      <p align="center"> RTSFX Bouble lab alembic (preset)<br>
+      <br \>
+      </a>
+        <audio controls>
+          <source src="audio/nature/RTSFX_AmbLaboratory.wav" type="audio/wav">
+          Your browser does not support the audio element.
+        </audio>
+      </p>
+      <a href="spectrogram/nature/RTSFXBoubleAmbLaboratory.png" target="_blank">
+      <img src="spectrogram/nature/RTSFXBoubleAmbLaboratory.png" alt="RTSFX Bouble lab alembic Spectrogram" width="100%">
+    </a>
+    </div>
+    <div class="col-md-6">
+      <p align="center"> Sample Bouble lab alembic<br>
+      <br \ >
+        <audio controls>
+          <source src="audio/nature/BoubleAmbLaboratory.wav" type="audio/wav">
+          Your browser does not support the audio element.
+        </audio>
+      </p>
+      <a href="spectrogram/nature/BoubleAmbLaboratory.png" target="_blank">
+      <img src="spectrogram/nature/BoubleAmbLaboratory.png" alt="Sample Bouble lab alembic Spectrogram" width="100%">
     </a>
     </div>
   </div>

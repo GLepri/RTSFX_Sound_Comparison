@@ -1,6 +1,6 @@
 <html>
   <head>
-    <title>RTSFX Review Home</title>
+    <title>RTSFX Review Rain</title>
     <link
       rel="stylesheet"
       type="text/css"
@@ -17,7 +17,6 @@
       div.boxed {
       border: 1px solid lightblue ; width: 5% ;
       }
-        </style>
     </style>
   </head>
   <!--------------------------------------------------------------------------->
@@ -64,13 +63,17 @@
           &nbsp; &nbsp;|
           &nbsp;
           <a
-          href="combinations.html">
+          href="comb.html">
           Combinations</a>
-          &nbsp;
           <hr></hr>
+          | &nbsp; &nbsp;
+          <a
+          href="references.html">
+          References</a>
+          &nbsp; &nbsp;|
+          <hr width=30%></hr>
         </font>
       </center>
-    &nbsp;
   </div>
   </header>
   <!--------------------------------------------------------------------------->
@@ -87,8 +90,12 @@
   <p>
     <h2>
       <font size="3">
-          <a href="#Fox">Fox</a>
+          <a href="#AtmosphereRain">Rain Atmosphere</a>
           -
+          <a href="#HeavyRain">Rain Heavy</a>
+          -
+          <a href="#UmbrellaRain">Rain Umbrella</a>
+
         </font>
     </h2>
   </p>
@@ -99,16 +106,43 @@
 <div class="container">
   <h3>
     <font size="3">
-      <p> Rain interface comments
+      <p> Interface comments
       <br \ >
         <ul>
-            <li>  </li> <br>
+            <li> All good, clear and neat.</li> <br>
         </ul>
         <hr></hr>
-        <p> Rain model comments
+        <p> Model comments
           <br \ >
            <ul>
-          <li> </li> <br>
+          <li> Compared to the RTSFX Rain the samples sounde more granular and dense. This could be managed by <b> increasing the granularity of the RTSFX synthesis </b>.
+               Suggestion: add a chorus effect to the output with a randomised "rate" and an high value of "depth". See the Max MSP image below for an example. </li> <br>
+               <div align="left">
+                 <img src="images/chorus.jpg" alt="chorus" width="40%">
+               </div>
+          <br \ >
+          <li> By comparing the spectrograms it is possible to note that the RTSFX rain is lacking of energy in the mid range.
+               In order to better simulate the recorded sounds, it would be beneficial to <b> increase the amount of sonic energy in the range 2000 - 8000 Hz </b>.
+               This could be acheived manipulating the "ambience" paramiter (e.g. add new istance of the process with a pass band filter).</li> <br>
+          <li> Single drops: compared to the receorded sounds, the synthetised rain is lacking of dripping sounds. It would be beneficial to <b> increase in density and
+               volume the drop sounds associated to the "drips" parameter </b>. Moreover, it would be good to expand the frequency range of this parameter, this to produce
+               drops sounds with lower frequencies (up to 200/300 Hz)  </li> <br>
+          <li> Differenciate left and right channels. <b> Two differnt istances of the same model could be sent to the right and left channels, this
+               would increase the naturalness of the model </b>. </li> <br>
+          <li> If the presets "RTSFX rain atmoshpere" and "RTSFX rain heavy" can be improoved, the sound "RTSFX rain umbrella" is very similar to the recorded sound.
+               This preset should be definetly included in the website. This is in line with the sound designers comments: the best setting
+               founded were those emulating a filtered rain sound (interior viewpoint).</li> <br>
+        </ul>
+        <hr></hr>
+        <p> Sound designers comments
+          <br \ >
+           <ul>
+          <li> The drips have a "metallic" edge to them, which meant I played their level quite low in attempting to configure a "natural" sound.
+               The best setting I achieved seemed to end up emulating the sound heard from an interior point of view (the most natural sound
+               I could achieve). </li> <br>
+          <li> Improve synthesis of drips and reduce the level of "noise" - more definition required to create a more natural sound </li> <br>
+          <li> The parameters only produce usable sounds in very specific sweet-spots </li> <br>
+          <li> Over all pitch control would be useful </li> <br>
         </ul>
         <br>
       </p>
@@ -119,32 +153,119 @@
 &nbsp;
 <!--------------------------------------------------------------------------->
 <div class="container">
+  <center>
   <div class="row">
-    <a name="Blackbird1"></a>
+    <div class="col-md-6" style="margin:0 auto;">
+      <p align="center"> <b> Dense and heavy rain example, to use as general reference. </b> </p> <br>
+        <audio controls>
+          <source src="audio/nature/Rain.wav" type="audio/wav">
+          Your browser does not support the audio element.
+        </audio>
+      </p>
+      <a href="spectrogram/nature/Rain.png" target="_blank">
+      <img src="spectrogram/nature/Rain.png" alt="Sample Rain Spectrogram" width="100%">
+    </a>
+    </div>
+  </div>
+</center>
+  <hr></hr>
+</div>
+&nbsp;
+<!--------------------------------------------------------------------------->
+<div class="container">
+  <p align="center"> <b> RTSFX syntheses - Recorded samples comparison. </b> </p> <br>
+  <div class="row">
+    <a name="AtmosphereRain"></a>
     <div class="col-md-6">
-      <a href="http://c4dm.eecs.qmul.ac.uk/audioengineering/RTSFX/bird-call.html?p1=0.318&p2=0.6&p3=0.527&p4=0.007&p5=0.95&p6=0.305&p7=0.019&p8=0.359&p9=0.149&p10=0.356&p11=0.164&p12=0.641&p13=0.503&p14=0.853&p15=0.626&p16=0.931" target="_blank">
-      <p align="center"> RTSFX Blackbird 1 (preset)<br>
+      <a href="http://c4dm.eecs.qmul.ac.uk/audioengineering/RTSFX/rain.html?p1=3&p2=1.5&p3=0.06&p4=7&p5=1" target="_blank">
+      <p align="center"> RTSFX Rain Atmosphere (preset)<br>
       <br \>
       </a>
         <audio controls>
-          <source src="audio/animals/RTSFX_Blackbird_1.wav" type="audio/wav">
+          <source src="audio/nature/RTSFX_RainAtmosfere.wav" type="audio/wav">
           Your browser does not support the audio element.
         </audio>
       </p>
-      <a href="spectrogram/animals/RSFX_Blackbird1.png" target="_blank">
-      <img src="spectrogram/animals/RSFX_Blackbird1.png" alt="RTSFX Blackbird 1 Spectrogram" width="100%">
+      <a href="spectrogram/nature/RTSFXAtmosphereRain.png" target="_blank">
+      <img src="spectrogram/nature/RTSFXAtmosphereRain.png" alt="RTSFX Rain Atmosphere Spectrogra" width="100%">
     </a>
     </div>
     <div class="col-md-6">
-      <p align="center"> Sample Blackbird 1<br>
+      <p align="center"> Sample Rain Atmosphere<br>
       <br \ >
         <audio controls>
-          <source src="audio/animals/BLACKBIRD_01.wav" type="audio/wav">
+          <source src="audio/nature/RainAtmosphere.wav" type="audio/wav">
           Your browser does not support the audio element.
         </audio>
       </p>
-      <a href="spectrogram/animals/Blackbird1.png" target="_blank">
-      <img src="spectrogram/animals/Blackbird1.png" alt="Sample Blackbird 1 Spectrogram" width="100%">
+      <a href="spectrogram/nature/AtmosphereRain.png" target="_blank">
+      <img src="spectrogram/nature/AtmosphereRain.png" alt="Sample Rain Atmosphere Spectrogram" width="100%">
+    </a>
+    </div>
+  </div>
+  <hr></hr>
+</div>
+<!--------------------------------------------------------------------------->
+<div class="container">
+  <div class="row">
+    <a name="AtmosphereRain"></a>
+    <div class="col-md-6">
+      <a href="http://c4dm.eecs.qmul.ac.uk/audioengineering/RTSFX/rain.html?p1=3&p2=1.5&p3=1&p4=7&p5=0.81" target="_blank">
+      <p align="center"> RTSFX Rain Heavy (preset)<br>
+      <br \>
+      </a>
+        <audio controls>
+          <source src="audio/nature/RTSFX_HeavyRain.wav" type="audio/wav">
+          Your browser does not support the audio element.
+        </audio>
+      </p>
+      <a href="spectrogram/nature/RTSFXHeavyRain.png" target="_blank">
+      <img src="spectrogram/nature/RTSFXHeavyRain.png" alt="RTSFX Rain Heavy Spectrogra" width="100%">
+    </a>
+    </div>
+    <div class="col-md-6">
+      <p align="center"> Sample Rain Heavy<br>
+      <br \ >
+        <audio controls>
+          <source src="audio/nature/Rain_Heavy.wav" type="audio/wav">
+          Your browser does not support the audio element.
+        </audio>
+      </p>
+      <a href="spectrogram/nature/HeavyRain.png" target="_blank">
+      <img src="spectrogram/nature/HeavyRain.png" alt="Sample Rain Heavy Spectrogram" width="100%">
+    </a>
+    </div>
+  </div>
+  <hr></hr>
+</div>
+<!--------------------------------------------------------------------------->
+<div class="container">
+  <div class="row">
+    <a name="UmbrellaRain"></a>
+    <div class="col-md-6">
+      <a href="http://c4dm.eecs.qmul.ac.uk/audioengineering/RTSFX/rain.html?p1=0&p2=0&p3=1&p4=0&p5=0.81" target="_blank">
+      <p align="center"> RTSFX Rain Umbrella (preset)<br>
+      <br \>
+      </a>
+        <audio controls>
+          <source src="audio/nature/RTSFX_RainUmbrella.wav" type="audio/wav">
+          Your browser does not support the audio element.
+        </audio>
+      </p>
+      <a href="spectrogram/nature/RTSFXUmbrellaRain.png" target="_blank">
+      <img src="spectrogram/nature/RTSFXUmbrellaRain.png" alt="RTSFX Rain Umbrella Spectrogra" width="100%">
+    </a>
+    </div>
+    <div class="col-md-6">
+      <p align="center"> Sample Rain Umbrella<br>
+      <br \ >
+        <audio controls>
+          <source src="audio/nature/Rain_Umbrella.wav" type="audio/wav">
+          Your browser does not support the audio element.
+        </audio>
+      </p>
+      <a href="spectrogram/nature/UmbrellaRain.png" target="_blank">
+      <img src="spectrogram/nature/UmbrellaRain.png" alt="Sample Rain Atmosphere Spectrogram" width="100%">
     </a>
     </div>
   </div>

@@ -1,6 +1,6 @@
 <html>
   <head>
-    <title>RTSFX Review Home</title>
+    <title>RTSFX Review Birds</title>
     <link
       rel="stylesheet"
       type="text/css"
@@ -17,7 +17,6 @@
       div.boxed {
       border: 1px solid lightblue ; width: 5% ;
       }
-        </style>
     </style>
   </head>
   <!--------------------------------------------------------------------------->
@@ -64,13 +63,17 @@
           &nbsp; &nbsp;|
           &nbsp;
           <a
-          href="combinations.html">
+          href="comb.html">
           Combinations</a>
-          &nbsp;
           <hr></hr>
+          | &nbsp; &nbsp;
+          <a
+          href="references.html">
+          References</a>
+          &nbsp; &nbsp;|
+          <hr width=30%></hr>
         </font>
       </center>
-    &nbsp;
   </div>
   </header>
 <!--------------------------------------------------------------------------->
@@ -106,26 +109,26 @@
                 <p> Interface comments
                 <br \ >
                   <ul>
-                      <li> Generally, for technical labels, add number boxes with related unit of measure to display sliders values </li> <br>
+                      <li> Generally, for technical labels, <b> add number boxes </b> with related unit of measure to display sliders values </li> <br>
                       <li> There are many attacks and decays parameters. It would be good to establish some sort of hierarchy to better identify which are the main parameters
-                           and which are the associated attacks and decays. Possibly grouping them? See picture </li> <br>
+                           and which are the associated attacks and decays. Possibly <b> group attack and decay parameters </b>, See picture </li> <br>
                            <div align="left">
                              <img src="images/birds_interface_ex.jpg" alt="birds_interface_ex" width="40%">
                            </div>
                       <br \ >
-                      <li> FM 1", "AM 1", "FM 1 Attack", "FM 1 Decay" - better define this paramiters - more explicitly (e.g Carrier Frequency, Carrier Frequency Attack, Carrier Frequency Decay,
-                           Modulating Frequency, Modulating Frequency Attack, Modulating Frequency Decay, etc.).
+                      <li> <b> Better define the paramiters "FM 1, AM 1, FM 1 Attack, FM 1 Decay" </b>- more explicitly (e.g Carrier Frequency, Carrier Frequency Attack, Carrier
+                           Frequency Decay, Modulating Frequency, Modulating Frequency Attack, Modulating Frequency Decay, etc.).
                            Eventually, think about perceptual terms (i.e. what does change in the sound)  </li> <br>
                   </ul>
                   <hr></hr>
                       Model comments <br>
                       <br \ >
                   <ul>
-                    <li> Birds calls are generally a sequence of sounds which slightly vary between each others longer than one or two seconds (see firsts three sound examples). It would be good to have the possibility to generate sounds with lenghts
-                         up to 10 - 15 seconds. Ideally, this could be acheived accessing a short time-line and scheduling a few events recalling presets. Alternativelly, the randomise feature
-                         could be used to manually generate variations within the same sonic scope </li> <br>
+                    <li> Birds calls are generally a sequence of sounds which slightly vary between each others longer than one or two seconds (see firsts three sound examples).
+                         It would be good to have the possibility to <b> generate sounds with lenghts up to 10 - 15 seconds </b>. Ideally, this could be acheived accessing a short time-line
+                         and scheduling a few events recalling presets. Alternativelly, the randomise feature could be used to manually generate variations within the same sonic scope </li> <br>
                     <li> Birds calls are characterised by small glissando (pitch shift, see examples below). Those variations are diffucult to replicate with FM synthesis. FM tends to generate simmetric spectrums
-                         (from a distribution of energy viewpoint). In order to generate more realistic bird call it would be useful to implement and control short glissando associated to the carrier frequency </li> <br>
+                         (from a distribution of energy viewpoint). In order to generate more realistic bird call it would be useful to <b> implement and control short glissando associated to the carrier frequency </b> </li> <br>
                   </ul>
                   <hr></hr>
                       Sound designers comments <br>
@@ -143,6 +146,7 @@
     &nbsp;
     <!--------------------------------------------------------------------------->
     <div class="container">
+      <p align="center"> <b>  Examples of long blackbird calls to use as reference  </b> </p> <br>
       <div class="row">
         <div class="col-md-6">
           <p align="center"> Example Blackbird Call Long 1<br>
@@ -203,6 +207,7 @@
 
 <!--------------------------------------------------------------------------->
 <div class="container">
+<p align="center"> <b> RTSFX syntheses - Recorded samples comparison. </b> </p> <br>
   <div class="row">
     <a name="Blackbird1"></a>
     <div class="col-md-6">
